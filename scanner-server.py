@@ -3,11 +3,11 @@ import socket
 # Create a socket object
 serversocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# Get local machine name
-host = socket.gethostname()
+# Get the IP address of the server (this assumes the server has a static IP address)
+server_ip = "192.168.0.222"  # Change this to the actual IP address of the server
 
-# Bind the socket to a public host and port 333
-serversocket.bind((host, 333))
+# Bind the socket to the IP address and port 333
+serversocket.bind((server_ip, 333))
 
 # Set the server to listen on port 333
 serversocket.listen(5)
